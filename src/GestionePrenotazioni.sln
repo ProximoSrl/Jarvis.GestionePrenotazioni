@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Client", "GestionePrenotazioni.Client\GestionePrenotazioni.Client.csproj", "{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Domain", "GestionePrenotazioni.Domain\GestionePrenotazioni.Domain.csproj", "{4760DDE8-44E0-46D8-B769-E32B707686FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Host", "GestionePrenotazioni.Host\GestionePrenotazioni.Host.csproj", "{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Tests", "GestionePrenotazioni.Tests\GestionePrenotazioni.Tests.csproj", "{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TeamCity.Integration.Utenti|Any CPU = TeamCity.Integration.Utenti|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.TeamCity.Integration.Utenti|Any CPU.ActiveCfg = Release|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.TeamCity.Integration.Utenti|Any CPU.Build.0 = Release|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{961CFC58-5E55-4A89-A0DC-B6D0A254CC14}.Test|Any CPU.Build.0 = Release|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.TeamCity.Integration.Utenti|Any CPU.ActiveCfg = TeamCity.Integration.Utenti|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.TeamCity.Integration.Utenti|Any CPU.Build.0 = TeamCity.Integration.Utenti|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{4760DDE8-44E0-46D8-B769-E32B707686FE}.Test|Any CPU.Build.0 = Test|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.TeamCity.Integration.Utenti|Any CPU.ActiveCfg = TeamCity.Integration.Utenti|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.TeamCity.Integration.Utenti|Any CPU.Build.0 = TeamCity.Integration.Utenti|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{DF51356A-8DC0-447A-B9EC-0E5A0DC45BB5}.Test|Any CPU.Build.0 = Test|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.TeamCity.Integration.Utenti|Any CPU.ActiveCfg = TeamCity.Integration.Utenti|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.TeamCity.Integration.Utenti|Any CPU.Build.0 = TeamCity.Integration.Utenti|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
