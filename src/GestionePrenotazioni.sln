@@ -11,6 +11,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Host",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionePrenotazioni.Tests", "GestionePrenotazioni.Tests\GestionePrenotazioni.Tests.csproj", "{05E4D743-BC09-4CC6-B7AF-D3A5E3C5ABB9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{239E7BF8-8AC9-4588-BD1D-B7F4B1947E25}"
+	ProjectSection(SolutionItems) = preProject
+		..\license.txt = ..\license.txt
+		..\Readme.MD = ..\Readme.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wiki", "Wiki", "{61FE4129-8676-46B8-997D-A6FAF47016E6}"
+	ProjectSection(SolutionItems) = preProject
+		..\wiki\dev\network.md = ..\wiki\dev\network.md
+		..\wiki\dev\prerequisites.md = ..\wiki\dev\prerequisites.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{3FA449F9-F1D4-4DF2-8E24-AF87962D6D2B}"
+	ProjectSection(SolutionItems) = preProject
+		..\wiki\dev\network.md = ..\wiki\dev\network.md
+		..\wiki\dev\prerequisites.md = ..\wiki\dev\prerequisites.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +72,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61FE4129-8676-46B8-997D-A6FAF47016E6} = {239E7BF8-8AC9-4588-BD1D-B7F4B1947E25}
+		{3FA449F9-F1D4-4DF2-8E24-AF87962D6D2B} = {61FE4129-8676-46B8-997D-A6FAF47016E6}
 	EndGlobalSection
 EndGlobal
