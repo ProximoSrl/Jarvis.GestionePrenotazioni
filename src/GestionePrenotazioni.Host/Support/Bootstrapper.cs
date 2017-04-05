@@ -68,6 +68,9 @@ namespace GestionePrenotazioni.Host.Support
             while (StartupCheck() == false)
             {
                 _logger.InfoFormat("Some precondition to start the service are not met. Will retry in 3 seconds!");
+
+                if (isStopped)
+                    return;
                 Thread.Sleep(3000);
             }
 
