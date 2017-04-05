@@ -10,14 +10,11 @@ using Jarvis.Framework.Bus.Rebus.Integration.Support;
 using Jarvis.Framework.Kernel.ProjectionEngine.Client;
 using Jarvis.Framework.Shared;
 using Jarvis.Framework.Shared.Helpers;
-using Jarvis.Framework.Shared.Messages;
 using Jarvis.NEventStoreEx;
 using Metrics;
-using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Hosting;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Clusters;
-using GestionePrenotazioni.Host.SignalR.Hubs;
 using Rebus;
 using System;
 using System.Collections.Generic;
@@ -27,6 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Jarvis.Framework.Kernel.ProjectionEngine;
 using GestionePrenotazioni.Domain.ReadModel;
+using Jarvis.Framework.Shared.Messages;
 
 namespace GestionePrenotazioni.Host.Support
 {
@@ -34,14 +32,11 @@ namespace GestionePrenotazioni.Host.Support
     {
         private GestionePrenotazioniConfiguration _config;
 
-        IDisposable _webApplication;
         IWindsorContainer _container;
         ILogger _logger;
         JarvisStartableFacility _startableFacility;
 
         private Boolean isStopped = false;
-
-        private String[] _databaseNames = new[] { "events", "originals", "artifacts", "system", "readmodel" };
 
         public void Start(GestionePrenotazioniConfiguration config)
         {
@@ -170,7 +165,7 @@ namespace GestionePrenotazioni.Host.Support
 
             _container.Install(installers.ToArray());
 
-            var projectionInstaller = new ProjectionsInstaller<NotifyReadModelChanges>(config);
+            var projectionInstaller = new ProjectionsInstaller<ReadModelUpdatesNotifier>(config);
             _container.Install(projectionInstaller);
 
             var test = _container.Resolve <ICollectionWrapper<AttrezzaturaReadModel, String>>();
@@ -178,7 +173,7 @@ namespace GestionePrenotazioni.Host.Support
             _startableFacility.StartAllIStartable();
             _container.CheckConfiguration();
 
-            _webApplication = WebApp.Start<GestionePrenotazioniApplication>(options);
+            WebApp.Start<GestionePrenotazioniApplication>(options);
             _logger.InfoFormat("Server started");
         }
 
@@ -246,26 +241,11 @@ namespace GestionePrenotazioni.Host.Support
         }
     }
 
-    public class NotifyReadModelChanges : INotifyToSubscribers
+    public class ReadModelUpdatesNotifier : INotifyToSubscribers
     {
-        public NotifyReadModelChanges()
-        {
-        }
-
         public void Send(object msg)
         {
-            ReadModelUpdatedMessage updateMessage;
-
-            if (!(msg is ReadModelUpdatedMessage)) { 
-                // TODO Decidere se è il caso di lanciare un'eccezione, ivece!
-                return;
-            }
-
-            updateMessage = (ReadModelUpdatedMessage)msg;
-            var context = GlobalHost.ConnectionManager.GetHubContext<NotificationsHub>();
-            
-            context.Clients.Group(updateMessage.ModelName).readModelUpdated(updateMessage);
-            context.Clients.Group(updateMessage.ModelName + "@" + updateMessage.Id).readModelUpdated(updateMessage);
+            // push notification
         }
     }
 }

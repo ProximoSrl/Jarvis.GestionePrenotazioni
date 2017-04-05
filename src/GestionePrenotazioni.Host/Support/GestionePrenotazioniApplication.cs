@@ -14,9 +14,6 @@ using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using Newtonsoft.Json;
 using System.Web.Http.Cors;
-using Microsoft.Owin.Cors;
-using GestionePrenotazioni.Host.SignalR;
-using Microsoft.AspNet.SignalR;
 using GestionePrenotazioni.Host.Support.Web;
 using GestionePrenotazioni.Domain.Support;
 
@@ -44,7 +41,6 @@ namespace GestionePrenotazioni.Host.Support
 
             ConfigureApi(application);
             ConfigureAdmin(application);
-            ConfigurationSignalR(application);
 
             Metric
                 .Config
@@ -163,18 +159,6 @@ namespace GestionePrenotazioni.Host.Support
 
             application.UseWebApi(config);
 
-        }
-
-        static void ConfigurationSignalR(IAppBuilder application)
-        {
-            // http://stackoverflow.com/questions/30005575/signalr-use-camel-case
-            var settings = new JsonSerializerSettings();
-            settings.ContractResolver = new SignalRContractResolver();
-            var serializer = JsonSerializer.Create(settings);
-            GlobalHost.DependencyResolver.Register(typeof(JsonSerializer), () => serializer);
-
-            application.UseCors(CorsOptions.AllowAll);
-            application.MapSignalR();
         }
     }
 }

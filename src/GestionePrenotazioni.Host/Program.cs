@@ -97,6 +97,7 @@ namespace GestionePrenotazioni.Host
                 host.SetDescription(_config.TopShelfDescription);
                 host.SetDisplayName(_config.TopShelfDisplayName);
                 host.SetServiceName(_config.TopShelfServiceName);
+                host.SetInstanceName(_config.ServerAddress);
             });
 
             if (Environment.UserInteractive && exitCode != TopshelfExitCode.Ok)
@@ -111,7 +112,7 @@ namespace GestionePrenotazioni.Host
         {
             if (!Environment.UserInteractive)
                 return;
-            Console.Title = _config.TopShelfServiceName + " Service";
+            Console.Title = _config.TopShelfServiceName + " Service @ " + _config.ServerAddress;
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.Clear();
         }
