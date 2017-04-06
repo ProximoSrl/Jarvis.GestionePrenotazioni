@@ -1,5 +1,8 @@
-# Jarvis Framework Sample
+# Gestione Prenotazioni
 ======
+
+Seed project for "Event based modelling & prototyping"
+
 
 Wiki
 
