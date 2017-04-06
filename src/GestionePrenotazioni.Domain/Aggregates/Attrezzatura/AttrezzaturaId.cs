@@ -1,6 +1,6 @@
 ﻿using Jarvis.Framework.Shared.IdentitySupport;
 
-namespace GestionePrenotazioni.Domain.Domain.Attrezzatura
+namespace GestionePrenotazioni.Domain.Aggregates.Attrezzatura
 {
     public class AttrezzaturaId : EventStoreIdentity
     {

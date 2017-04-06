@@ -8,11 +8,11 @@ using System.Web.Http;
 using Rebus;
 using GestionePrenotazioni.Domain.ReadModel;
 using GestionePrenotazioni.Client.Controllers.Models;
-using GestionePrenotazioni.Domain.Domain.Attrezzatura;
-using GestionePrenotazioni.Domain.Domain.Attrezzatura.Commands;
 using Jarvis.Framework.Shared.IdentitySupport;
 using GestionePrenotazioni.Host.Support;
 using System.Collections.Generic;
+using GestionePrenotazioni.Domain.Aggregates.Attrezzatura;
+using GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Commands;
 using GestionePrenotazioni.Host.Controllers.Swagger;
 
 namespace GestionePrenotazioni.Host.Controllers

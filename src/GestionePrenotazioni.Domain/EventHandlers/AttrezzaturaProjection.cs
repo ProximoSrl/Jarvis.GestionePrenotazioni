@@ -1,9 +1,9 @@
-﻿using GestionePrenotazioni.Domain.Domain.Attrezzatura.Events;
-using GestionePrenotazioni.Domain.ReadModel;
+﻿using GestionePrenotazioni.Domain.ReadModel;
 using Jarvis.Framework.Kernel.Events;
 using Jarvis.Framework.Kernel.ProjectionEngine;
 using MongoDB.Driver;
 using System;
+using GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Events;
 
 namespace GestionePrenotazioni.Domain.EventHandlers
 {

@@ -1,6 +1,6 @@
-﻿using Jarvis.Framework.Kernel.Events;
+﻿using GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Events;
+using Jarvis.Framework.Kernel.Events;
 using Jarvis.Framework.Kernel.Commands;
-using GestionePrenotazioni.Domain.Domain.Attrezzatura.Events;
 using Rebus;
 
 namespace GestionePrenotazioni.Domain.EventToCommand

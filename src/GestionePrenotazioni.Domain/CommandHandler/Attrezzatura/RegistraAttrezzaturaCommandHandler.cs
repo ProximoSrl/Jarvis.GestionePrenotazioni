@@ -1,18 +1,25 @@
-﻿using GestionePrenotazioni.Domain.Domain.Attrezzatura.Commands;
-using Jarvis.Framework.Kernel.Commands;
+﻿using Jarvis.Framework.Kernel.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Commands;
 
 namespace GestionePrenotazioni.Domain.CommandHandler.Attrezzatura
 {
-    public class RegistraAttrezzaturaCommandHandler : RepositoryCommandHandler<Domain.Attrezzatura.Attrezzatura, RegistraAttrezzatura>
+    public class RegistraAttrezzaturaCommandHandler :
+        RepositoryCommandHandler<Aggregates.Attrezzatura.Attrezzatura, RegistraAttrezzatura>
     {
         protected override void Execute(RegistraAttrezzatura cmd)
         {
-            FindAndModify(cmd.AggregateId, a => a.Registra(cmd.Nome), true);
+            FindAndModify(cmd.AggregateId, a =>
+                {
+                    if (!a.HasBeenCreated)
+                        a.Registra(cmd.Nome);
+                },
+                createIfNotExists: true
+            );
         }
     }
 }

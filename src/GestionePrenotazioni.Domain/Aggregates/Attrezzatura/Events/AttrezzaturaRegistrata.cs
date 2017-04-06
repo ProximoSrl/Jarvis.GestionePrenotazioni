@@ -1,11 +1,7 @@
-﻿using Jarvis.Framework.Shared.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Jarvis.Framework.Shared.Events;
 
-namespace GestionePrenotazioni.Domain.Domain.Attrezzatura.Events
+namespace GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Events
 {
     public class AttrezzaturaRegistrata : DomainEvent
     {

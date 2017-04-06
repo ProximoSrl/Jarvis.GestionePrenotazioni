@@ -153,11 +153,11 @@
     <Compile Include="Bus\Messages\BaseMessage.cs" />
     <Compile Include="Bus\Messages\VerificaFilePubblicatoMessage.cs" />
     <Compile Include="CommandHandler\Attrezzatura\RegistraAttrezzaturaCommandHandler.cs" />
-    <Compile Include="Domain\Attrezzatura\Attrezzatura.cs" />
-    <Compile Include="Domain\Attrezzatura\AttrezzaturaId.cs" />
-    <Compile Include="Domain\Attrezzatura\AttrezzaturaState.cs" />
-    <Compile Include="Domain\Attrezzatura\Commands\RegistraAttrezzatura.cs" />
-    <Compile Include="Domain\Attrezzatura\Events\AttrezzaturaRegistrata.cs" />
+    <Compile Include="Aggregates\Attrezzatura\Attrezzatura.cs" />
+    <Compile Include="Aggregates\Attrezzatura\AttrezzaturaId.cs" />
+    <Compile Include="Aggregates\Attrezzatura\AttrezzaturaState.cs" />
+    <Compile Include="Aggregates\Attrezzatura\Commands\RegistraAttrezzatura.cs" />
+    <Compile Include="Aggregates\Attrezzatura\Events\AttrezzaturaRegistrata.cs" />
     <Compile Include="EventHandlers\AttrezzaturaProjection.cs" />
     <Compile Include="EventToCommand\AccountEventToCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

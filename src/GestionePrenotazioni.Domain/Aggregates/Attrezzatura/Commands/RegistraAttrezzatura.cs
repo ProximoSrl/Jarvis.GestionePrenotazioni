@@ -1,11 +1,7 @@
-﻿using Jarvis.Framework.Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Jarvis.Framework.Shared.Commands;
 
-namespace GestionePrenotazioni.Domain.Domain.Attrezzatura.Commands
+namespace GestionePrenotazioni.Domain.Aggregates.Attrezzatura.Commands
 {
     public class RegistraAttrezzatura : Command<AttrezzaturaId>
     {
